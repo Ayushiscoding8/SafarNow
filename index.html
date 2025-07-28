@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafarNow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🇮🇳 India Travel Manager</h1>
+            <nav>
+                <ul>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#planner">Trip Planner</a></li>
+                    <li><a href="#weather">Weather</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <h2>Plan Your Perfect Trip Across India</h2>
+                <p>Discover amazing destinations with smart cost calculation and weather predictions</p>
+            </div>
+        </section>
+
+        <section id="destinations">
+            <div class="container">
+                <h2>Popular Destinations</h2>
+                <div class="destinations-grid" id="destinationsGrid">
+                    <!-- Destinations will be loaded here with images -->
+                </div>
+            </div>
+        </section>
+
+        <section id="planner">
+            <div class="planner-overlay"></div>
+            <div class="container">
+                <h2>Trip Planner</h2>
+                <div class="planner-content">
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label for="destination">Select Destination:</label>
+                            <select id="destination">
+                                <option value="">Choose a destination</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="startDate">Start Date:</label>
+                            <input type="date" id="startDate">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="endDate">End Date:</label>
+                            <input type="date" id="endDate">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="travelers">Number of Travelers:</label>
+                            <input type="number" id="travelers" min="1" value="2">
+                        </div>
+                        
+                        <button id="calculateTrip" class="btn-primary">Calculate Trip Cost</button>
+                    </div>
+                    
+                    <div class="result-section" id="resultSection" style="display: none;">
+                        <h3>Trip Summary</h3>
+                        <div id="tripResults"></div>
+                        <div id="weatherForecast"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
